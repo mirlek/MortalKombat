@@ -1,4 +1,14 @@
-const hero = {
+const player1 = {
+    name: 'June',
+    hp: 100,
+    img: 'Nice pic',
+    weapon: [],
+    attack: function() {
+        console.log(hero.name + 'Fight...');
+    }
+};
+
+const player2 = {
     name: 'June',
     hp: 100,
     img: 'Nice pic',
@@ -9,9 +19,9 @@ const hero = {
 };
 
 
-function createPlayer() {
+function createPlayer(player_class, name, life) {
     const $player1 = document.createElement('div');
-    $player1.classList.add('player1');
+    $player1.classList.add(player_class);
 
     const $progressbar = document.createElement('div');
     $progressbar.classList.add('progressbar');
@@ -21,11 +31,11 @@ function createPlayer() {
 
     const $life = document.createElement('div');
     $life.classList.add('life');
-    $life.style.width = '100%';
+    $life.style.width = life +'%';
 
     const $name = document.createElement('div');
     $name.classList.add('name');
-    $name.innerText = 'Katana';
+    $name.innerText = name;
 
     const $img = document.createElement('img');
     $img.src = 'http://reactmarathon-api.herokuapp.com/assets/kitana.gif';
