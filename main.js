@@ -6,7 +6,7 @@
 //     img: 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
 //     weapon: [],
 //     attack: function() {
-//         console.log(player1.name + 'Fight...');
+//         console.log(leader.name + 'Fight...');
 //     }
 // };
 
@@ -16,7 +16,7 @@
 //     img: 'http://reactmarathon-api.herokuapp.com/assets/sonya.gif',
 //     weapon: [],
 //     attack: function() {
-//         console.log(player2.name + 'Fight...');
+//         console.log(hero.name + 'Fight...');
 //     }
 // };
 
@@ -55,7 +55,7 @@
 
 // createPlayer('player1');
 
-//2nd Task
+// //2nd Task
 
 function createPlayer(player_class, name, life) {
     const $player1 = document.createElement('div');
@@ -92,21 +92,23 @@ createPlayer('player1', 'Kitty', 12);
 createPlayer('player2', 'Linn', 52);
 
 
-// /// 3rd Task
+// // 3rd Task
 
 // const hero = {
 //     name: 'May',
-//     hp: 50,
+//     hp: 10,
 //     img: 'http://reactmarathon-api.herokuapp.com/assets/sonya.gif',
 //     weapon: [],
 //     attack: function() {
-//         console.log(player2.name + 'Fight...');
+//         console.log(hero.name + ' ' + 'Fight...');
 //     }
 // };
 
-// function createPlayer(player_class, hero) {
+// hero.attack();
+
+// function createPlayer(player1, hero) {
 //     const $player1 = document.createElement('div');
-//     $player1.classList.add(player_class);
+//     $player1.classList.add(player1);
 
 //     const $progressbar = document.createElement('div');
 //     $progressbar.classList.add('progressbar');
@@ -135,4 +137,4 @@ createPlayer('player2', 'Linn', 52);
 
 // };
 
-// createPlayer('player', hero);
+// createPlayer('player1', hero);
