@@ -1,65 +1,27 @@
-// // 0st Task
 
-// const leader = {
-//     name: 'June',
-//     hp: 80,
-//     img: 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
-//     weapon: [],
-//     attack: function() {
-//         console.log(leader.name + 'Fight...');
-//     }
-// };
+const player1 = {
+    name: 'June',
+    hp: 80,
+    img: 'http://reactmarathon-api.herokuapp.com/assets/subzero.gif',
+    weapon: [],
+    attack: function() {
+        console.log(player1.name + 'Fight...');
+    }
+};
 
-// const hero = {
-//     name: 'May',
-//     hp: 50,
-//     img: 'http://reactmarathon-api.herokuapp.com/assets/sonya.gif',
-//     weapon: [],
-//     attack: function() {
-//         console.log(hero.name + 'Fight...');
-//     }
-// };
+const player2 = {
+    name: 'May',
+    hp: 50,
+    img: 'http://reactmarathon-api.herokuapp.com/assets/sonya.gif',
+    weapon: [],
+    attack: function() {
+        console.log(player2.name + 'Fight...');
+    }
+};
 
-// // 1st Task
-
-// function createPlayer(player_class, name, life) {
-//     const $player1 = document.createElement('div');
-//     $player1.classList.add(player_class);
-
-//     const $progressbar = document.createElement('div');
-//     $progressbar.classList.add('progressbar');
-
-//     const $character = document.createElement('div');
-//     $character.classList.add('character');
-
-//     const $life = document.createElement('div');
-//     $life.classList.add('life');
-//     $life.style.width = '100%';
-
-//     const $name = document.createElement('div');
-//     $name.classList.add('name');
-//     $name.innerText = 'Brad';
-
-//     const $img = document.createElement('img');
-//     $img.src = 'http://reactmarathon-api.herokuapp.com/assets/liukang.gif';
-
-//     const $arenas = document.querySelector('.arenas');
-//     $arenas.appendChild($player1);
-//     $player1.appendChild($progressbar);
-//     $player1.appendChild($character);
-//     $progressbar.appendChild($life);
-//     $progressbar.appendChild($name);
-//     $character.appendChild($img);
-
-// };
-
-// createPlayer('player1');
-
-// //2nd Task
-
-function createPlayer(player_class, name, life) {
-    const $player1 = document.createElement('div');
-    $player1.classList.add(player_class);
+function createPlayer(classPlayer, playerObj) {
+    const $player = document.createElement('div');
+    $player.classList.add(classPlayer);
 
     const $progressbar = document.createElement('div');
     $progressbar.classList.add('progressbar');
@@ -69,72 +31,24 @@ function createPlayer(player_class, name, life) {
 
     const $life = document.createElement('div');
     $life.classList.add('life');
-    $life.style.width = life +'%';
+    $life.style.width = playerObj.hp +'%';
 
     const $name = document.createElement('div');
     $name.classList.add('name');
-    $name.innerText = name;
+    $name.innerText = playerObj.name;
 
     const $img = document.createElement('img');
-    $img.src = 'http://reactmarathon-api.herokuapp.com/assets/kitana.gif';
+    $img.src = playerObj.img;
 
     const $arenas = document.querySelector('.arenas');
-    $arenas.appendChild($player1);
-    $player1.appendChild($progressbar);
-    $player1.appendChild($character);
+    $arenas.appendChild($player);
+    $player.appendChild($progressbar);
+    $player.appendChild($character);
     $progressbar.appendChild($life);
     $progressbar.appendChild($name);
     $character.appendChild($img);
 
 };
 
-createPlayer('player1', 'Kitty', 12);
-createPlayer('player2', 'Linn', 52);
-
-
-// // 3rd Task
-
-// const hero = {
-//     name: 'May',
-//     hp: 10,
-//     img: 'http://reactmarathon-api.herokuapp.com/assets/sonya.gif',
-//     weapon: [],
-//     attack: function() {
-//         console.log(hero.name + ' ' + 'Fight...');
-//     }
-// };
-
-// hero.attack();
-
-// function createPlayer(player1, hero) {
-//     const $player1 = document.createElement('div');
-//     $player1.classList.add(player1);
-
-//     const $progressbar = document.createElement('div');
-//     $progressbar.classList.add('progressbar');
-
-//     const $character = document.createElement('div');
-//     $character.classList.add('character');
-
-//     const $life = document.createElement('div');
-//     $life.classList.add('life');
-//     $life.style.width = hero.hp +'%';
-
-//     const $name = document.createElement('div');
-//     $name.classList.add('name');
-//     $name.innerText = hero.name;
-
-//     const $img = document.createElement('img');
-//     $img.src = hero.img;
-
-//     const $arenas = document.querySelector('.arenas');
-//     $arenas.appendChild($player1);
-//     $player1.appendChild($progressbar);
-//     $player1.appendChild($character);
-//     $progressbar.appendChild($life);
-//     $progressbar.appendChild($name);
-//     $character.appendChild($img);
-
-// };
-
-// createPlayer('player1', hero);
+createPlayer('player1', player1);
+createPlayer('player2', player2);
