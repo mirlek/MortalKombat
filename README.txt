@@ -1,4 +1,4 @@
-There are my results taken in the Zarmarafon 2021. Then I was making some corrections on my own to reach the consistency.
+There are my results taken in the Zarmarathon 2021. Then I was making some corrections on my own to reach the consistency.
 
 
 # main commands
